@@ -1,8 +1,8 @@
 //load spinner
 const spinner = document.getElementById("spiner");
 const spinnerLoding = (isloading) => {
+  console.log(spinner);
   if (isloading === true) {
-    console.log(spinner);
     spinner.classList.remove("d-none");
   } else {
     spinner.classList.add("d-none");
@@ -38,6 +38,9 @@ const displayCatagories = (data) => {
 
 /* loadNews */
 const loadNews = (category_id) => {
+  // load spinner
+  // spinner start
+  spinnerLoding(true);
   const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
   fetch(url)
     .then((res) => res.json())
@@ -102,8 +105,6 @@ const displayNews = (data) => {
 };
 
 const loadDetailsModal = (id) => {
-  // spinner start
-  spinnerLoding(true);
   const url = `https://openapi.programming-hero.com/api/news/${id}`;
   fetch(url)
     .then((res) => res.json())
