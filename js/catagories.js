@@ -1,3 +1,5 @@
+//load
+
 /* load catagory */
 const loadCatagories = () => {
   const url = `https://openapi.programming-hero.com/api/news/categories`;
