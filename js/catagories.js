@@ -112,6 +112,7 @@ const displayNewsDetails = (data) => {
                     <img class="auther-img" src="${data.author.img}">
                     <h5>${data.author.name}</h5>
                     <p>view:${data.total_view}</p>
+                    <p>Rating:${data.rating.number}</p>
                 </div>
 
                 <p class="card-text ">
@@ -133,3 +134,6 @@ const displayNewsDetails = (data) => {
 };
 
 loadCatagories();
+const redirect = () => {
+  window.location.href = "blog.html";
+};
