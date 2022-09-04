@@ -2,6 +2,7 @@
 const spinner = document.getElementById("spiner");
 const spinnerLoding = (isloading) => {
   if (isloading === true) {
+    console.log(spinner);
     spinner.classList.remove("d-none");
   } else {
     spinner.classList.add("d-none");
@@ -52,7 +53,7 @@ const displayNews = (data) => {
   newsContainer.textContent = "";
 
   data.forEach((news) => {
-    console.log(news);
+    // console.log(news);
     const newsDiv = document.createElement("div");
     newsDiv.classList.add("mb-4");
     newsDiv.innerHTML = `
@@ -112,7 +113,7 @@ const loadDetailsModal = (id) => {
 const displayNewsDetails = (data) => {
   const modalContainer = document.getElementById("modal-container");
   modalContainer.textContent = "";
-  console.log(data);
+  // console.log(data);
   const modalDiv = document.createElement("div");
   modalDiv.classList.add("modal-content");
   modalDiv.innerHTML = `
