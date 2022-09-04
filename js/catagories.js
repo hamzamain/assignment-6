@@ -49,7 +49,9 @@ const displayNews = (data) => {
     <div class="card mb-3 border" style="max-width: 100%">
     <div class="row g-0">
             <div class="col-md-4">
-              <img src="${news.thumbnail_url}" class="img-fluid rounded-start" alt="..." />
+              <img src="${
+                news.thumbnail_url
+              }" class="img-fluid rounded-start" alt="..." />
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -63,11 +65,19 @@ const displayNews = (data) => {
               </div>
               <div class="d-flex justify-content-around mb-3">
                 <div class="d-flex gap-4 ">
-                    <img class="auther-img" src="${news.author.img}">
-                    <h5>${news.author.name}</h5>
-                    <p>view:${news.total_view}</p>
+                    <img class="auther-img" src="${
+                      news.author.img ? news.author.img : "no data available"
+                    }">
+                    <h5>${
+                      news.author.name ? news.author.name : "no data available"
+                    }</h5>
+                    <p>view:${
+                      news.total_view ? news.total_view : "no data available"
+                    }</p>
                 </div>
-                <button onclick="loadDetailsModal('${news._id}')" class="btn btn-primary h-2 w-3" data-bs-toggle="modal"
+                <button onclick="loadDetailsModal('${
+                  news._id
+                }')" class="btn btn-primary h-2 w-3" data-bs-toggle="modal"
                 data-bs-target="#newsDetailsButton">details</button>
               </div>
             </div>
